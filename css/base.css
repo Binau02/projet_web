@@ -1,0 +1,81 @@
+/*
+#FAF0E4
+#9BCDD2
+#FF8551
+#FFDEDE
+*/
+
+/* * {
+  border: solid red 1px;
+} */
+
+:root {
+  --color-1: #FAF0E4;
+  --color-2: #9BCDD2;
+  --color-3: #FF8551;
+  --color-4: #FFDEDE;
+}
+
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#header {
+  background-color: var(--color-3);
+  height: 8vh;
+  padding: 0.5vh;
+  transition: background-color 0.5s;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+#title {
+  /* font-size: 5vh;
+  margin-left: 1vw;
+  padding-bottom: 2vh; */
+  flex: auto;
+}
+
+#connexion {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5vw;
+  align-items: center;
+}
+
+#logo {
+  height: 7vh;
+}
+
+input, button {
+  all: unset;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border: var(--color-2) solid 2px;
+  border-radius: 50px;
+}
+
+button {
+  color: var(--color-2);
+}
+
+input.fill, button.fill {
+  background-color: var(--color-1);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--color-2);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--color-2);
+}

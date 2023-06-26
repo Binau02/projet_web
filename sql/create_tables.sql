@@ -1,42 +1,42 @@
 CREATE TABLE people(
   id INT,
-  age BYTE NOT NULL,
-  cat_veh BYTE,
-  place BYTE,
-  security BYTE NOT NULL,
-  gravity BYTE,
+  age TINYINT NOT NULL,
+  cat_veh TINYINT,
+  place TINYINT,
+  security TINYINT NOT NULL,
+  gravity TINYINT,
   PRIMARY KEY(id)
 );
 
 CREATE TABLE athmo(
-  id_athmo BYTE,
+  id_athmo TINYINT,
   type VARCHAR(20),
   PRIMARY KEY(id_athmo)
 );
 
 CREATE TABLE agglo(
-  id_agglo BYTE,
+  id_agglo TINYINT,
   type VARCHAR(20),
   PRIMARY KEY(id_agglo)
 );
 
 CREATE TABLE lum(
-  id_lum BYTE,
+  id_lum TINYINT,
   type VARCHAR(20),
   PRIMARY KEY(id_lum)
 );
 
 CREATE TABLE surf(
-  id_surf BYTE,
+  id_surf TINYINT,
   type VARCHAR(20),
   PRIMARY KEY(id_surf)
 );
 
 CREATE TABLE accident(
-  id_surf BYTE,
-  id_agglo BYTE,
-  id_lum BYTE,
-  id_athmo BYTE,
+  id_surf TINYINT,
+  id_agglo TINYINT,
+  id_lum TINYINT,
+  id_athmo TINYINT,
   num_acc VARCHAR(50),
   lat DECIMAL(15,13) NOT NULL,
   lon DECIMAL(15,13) NOT NULL,
@@ -50,10 +50,10 @@ CREATE TABLE accident(
 );
 
 CREATE TABLE implique(
-  id_surf BYTE,
-  id_agglo BYTE,
-  id_lum BYTE,
-  id_athmo BYTE,
+  id_surf TINYINT,
+  id_agglo TINYINT,
+  id_lum TINYINT,
+  id_athmo TINYINT,
   num_acc VARCHAR(50),
   id INT,
   PRIMARY KEY(id_surf, id_agglo, id_lum, id_athmo, num_acc, id),
